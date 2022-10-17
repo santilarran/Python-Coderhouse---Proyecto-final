@@ -1,0 +1,36 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+
+{% block principal %}
+
+<form action="" method="POST" enctype="multipart/form-data"> {%csrf_token%}
+<table>
+
+{{form.as_table}}
+
+</table>
+<br>
+
+<input type="submit", value="Confirmar">
+
+</form>
+
+{% endblock %}
+
+
+{% block titulo %}
+
+
+
+{% endblock %}
+
+
+{% block prueba %}
+
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+
+{% block principal %}
+
+<h1>Bienvenidos a mi página de ventas!</h1>
+
+{% endblock %}
+
+
+{% block titulo %}
+
+<h2>Este página fue creada para que puedas publicar lo que quieras vender!</h2>
+
+{% endblock %}
+
+
+{% block body %}
+
+<h2>Buscar objetos:</h2>
+<br>
+
+<form action="/AppCoder/buscar/" method="GET">
+    <div class="card-body">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Ingresar objeto..." name="objeto" id="objeto">
+            <input type="submit" value="Buscar">
+        </div>
+    </div>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+
+{% block principal %}
+
+<h1>Objetos disponibles:</h1>
+
+
+{% endblock %}
+
+
+{% block titulo %}
+
+
+{% endblock %}
+
+
+{% block body %}
+
+{% for objetos in resultados %}
+
+<p>{{objetos.objeto}}</p>
+<p>Descripción: {{objetos.descripcion}}</p>
+<p>Fecha de subida: {{objetos.fecha}}</p>
+<p>Precio: {{objetos.precio}}</p>
+
+<img src="{{objetos.imagen.url}}" alt="No hay imágen">
+
+
+
+{% endfor %}
+
+{% endblock %}
