@@ -12,6 +12,9 @@ class ObjetoVenta(models.Model):
 
         return f"Objeto: {self.objeto} -------- fecha de subida: {self.fecha}"
 
+    nombre = models.CharField(max_length=60, null=True)
+    apellido = models.CharField(max_length=60, null=True)
+    contacto = models.IntegerField(blank=True, null=True)
     objeto = models.CharField(max_length=60)
     descripcion = models.TextField(max_length=300)
     fecha = models.DateField()

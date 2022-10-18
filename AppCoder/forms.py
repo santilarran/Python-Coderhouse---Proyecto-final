@@ -35,4 +35,4 @@ class ObjetoFormulario(forms.ModelForm):
     class Meta:
 
         model = ObjetoVenta
-        fields = ["objeto", "descripcion", "fecha", "precio", "imagen"]
+        fields = ["nombre","apellido","contacto","objeto", "descripcion", "fecha", "precio", "imagen"]

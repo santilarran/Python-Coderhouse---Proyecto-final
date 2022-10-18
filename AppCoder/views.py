@@ -111,7 +111,7 @@ def objetoVenta(request):
 
             info = formulario1.cleaned_data
 
-            objeto1 = ObjetoVenta(objeto=info["objeto"], descripcion=info["descripcion"],
+            objeto1 = ObjetoVenta(nombre=info["nombre"],apellido=info["apellido"],contacto=info["contacto"],objeto=info["objeto"], descripcion=info["descripcion"],
                                   fecha=info["fecha"], precio=info["precio"], imagen=info["imagen"])
 
             objeto1.save()
@@ -176,6 +176,9 @@ def editarObjeto(request, objetoNombre):
 
             info = formulario1.cleaned_data
 
+            objeto1.nombre = info["nombre"]
+            objeto1.apellido = info["apellido"]
+            objeto1.contacto = info["contacto"]
             objeto1.objeto = info["objeto"]
             objeto1.descripcion = info["descripcion"]
             objeto1.fecha = info["fecha"]
@@ -188,6 +191,6 @@ def editarObjeto(request, objetoNombre):
 
     else:
 
-        formulario1 = ObjetoFormulario(initial={"objeto":objeto1.objeto, "descripcion":objeto1.descripcion, "fecha":objeto1.fecha, "precio":objeto1.precio, "imagen":objeto1.imagen})
+        formulario1 = ObjetoFormulario(initial={"nombre":objeto1.nombre,"apellido":objeto1.apellido,"contacto":objeto1.contacto,"objeto":objeto1.objeto, "descripcion":objeto1.descripcion, "fecha":objeto1.fecha, "precio":objeto1.precio, "imagen":objeto1.imagen})
 
     return render(request, 'AppCoder/editarObjeto.html', {"form": formulario1, "resultado":objetoNombre})

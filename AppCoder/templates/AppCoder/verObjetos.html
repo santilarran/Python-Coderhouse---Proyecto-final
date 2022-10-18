@@ -22,14 +22,16 @@
 {% block body %}
 
 {% for obj in objects %}
-
-<p>Publicación hecha por: {{user.first_name}} {{user.last_name}}</p>
+<img src="{{obj.imagen.url}}" alt="No hay imágen">
+<p>Publicación hecha por: {{obj.nombre}} {{obj.apellido}}</p>
+<p>Contacto: {{obj.contacto}}</p>
 <p>{{obj.objeto}}</p>
 <p>Descripción: {{obj.descripcion}}</p>
 <p>Fecha de subida: {{obj.fecha}}</p>
 <p>Precio: {{obj.precio}}</p>
 
-<img src="{{obj.imagen.url}}" alt="No hay imágen">
+<br>
+
 
 
 
