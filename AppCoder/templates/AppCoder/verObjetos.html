@@ -23,6 +23,7 @@
 
 {% for obj in objects %}
 
+<p>Publicación hecha por: {{user.first_name}} {{user.last_name}}</p>
 <p>{{obj.objeto}}</p>
 <p>Descripción: {{obj.descripcion}}</p>
 <p>Fecha de subida: {{obj.fecha}}</p>
@@ -33,7 +34,7 @@
 
 
 <button>
-    <a href="{% url 'EliminarObjeto' obj.objeto %}">Eliminar publicación</a>
+    <a href="{% url 'Eliminarobjeto' obj.objeto %}">Eliminar publicación</a>
 </button>
 <button>
     <a href="{% url 'Editarobjeto' obj.objeto %}">Editar publicación</a>

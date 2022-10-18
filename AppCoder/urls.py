@@ -15,6 +15,6 @@ urlpatterns = [
     path('venta/', objetoVenta, name="Venta"),
     path('verobjetos', verObjetos, name="Verobjetos"),
     path('buscar/', buscar, name="Busqueda"),
-    path('eliminarObjeto/<objetoNombre>', eliminarObjeto, name="EliminarObjeto"),
+    path('eliminarObjeto/<objetoNombre>', eliminarObjeto, name="Eliminarobjeto"),
     path('editarObjeto/<objetoNombre>', editarObjeto, name="Editarobjeto"),
 ]
